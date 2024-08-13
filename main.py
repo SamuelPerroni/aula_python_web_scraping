@@ -13,7 +13,7 @@ mail_password = os.getenv("MAIL_PASSWORD")
 
 get_values_from_bovespa = Bovespa(BOVESPA_URL, CSV_PATH)
 
-mail = Mail(MAIL_FROM, MAIL_PASSWORD)
+mail = Mail(mail_from, mail_password)
 
 get_bitcoin_value = CoinMarketCap(COINMARKETCAP_URL)
 price = get_bitcoin_value.get_bitcoin_price()
