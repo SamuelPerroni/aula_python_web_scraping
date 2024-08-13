@@ -3,6 +3,13 @@ from mail_config.mail import Mail
 from web_scraping.webscraping_bovespa import Bovespa
 from web_scraping.webscraping_coinmarketcap import CoinMarketCap
 from const import *
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+mail_from = os.getenv("MAIL_FROM")
+mail_password = os.getenv("MAIL_PASSWORD")
 
 get_values_from_bovespa = Bovespa(BOVESPA_URL, CSV_PATH)
 
